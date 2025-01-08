@@ -1,0 +1,35 @@
+/* css file of status.html */
+.avatar-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.status-indicator {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    border: 2px solid white;
+}
+
+#userStatus{
+    z-index: 9999;
+    /* Toujours visible */
+    display: none;
+    /* Caché par défaut */
+    font-size: 14px;
+    border: 2px solid #ddd;
+}
+
+#userStatus img{
+    border: 2px solid #28a745;
+}

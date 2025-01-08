@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaliLearn | Tableau de bord</title>
+    <link rel="icon" href="../assets/logo_kl.png" type="image/png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/status.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'PT', sans-serif;
+        }
+        @font-face{
+            font-family: 'PT';
+            src: url('PTSerif-Regular.ttf')
+            format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .animate-on-scroll{
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+        .animate-on-scroll.visible{
+            opacity: 1; 
+            transform: translateY(0);
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        main{
+            flex: 1;
+        }
+        .container {
+            flex: 1 0 auto; /* Permet à .container de prendre toute la hauteur disponible */
+        }
+        footer {
+            position: relative;
+            width: 100%;
+        }
+        footer a{
+            color: rgb(235, 235, 252);;
+            text-decoration: underline;
+        }
+        footer a:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid sticky-top">
+            <a href="index.html" class="navbar-brand">
+                KhaliLearn
+            </a>  
+    </nav>
+    <ol class="breadcrumb bg-light p-3 ">
+        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>  
+        <li class="breadcrumb-item active">Maîtriser les bases de l'informatique</li> 
+        <li class="breadcrumb-item active">Tableau de bord</li>  
+        <li class="breadcrumb-item"><a href="course1.html">Cours</a></li>  
+        <li class="breadcrumb-item"><a href="course1.html">Evaluations</a></li>
+    </ol>
+    <div class="container mt-2 animate-on-scroll">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Important :</strong> Veuillez compléter l'examen final disponible <a href="eval4_course1.html">ici</a> avant la date limite et soumettre vos réponses. 
+            Assurez-vous également de remplir toutes les conditions d'éligibilité au certificat, 
+            notamment le règlement des frais de formation fixés à <strong>6000 FCFA</strong>. Les Informations
+            du tableau de bord sont ajustées en temps réels.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+        <h1 class="text-center fw-bold">Bienvenue 😎!</h1>
+        <div class="mb-3 avatar-container d-flex justify-content-center">
+            <img src="../assets/default-avatar.png" alt="Avatar">
+            <span class="status-indicator"></span>
+        </div>        
+        <!-- Section 1 -->
+        <h2 class="fw-bold">Informations Personnelles</h2>
+        <div id="personalInfo" class="table-responsive"></div>
+    
+        <!-- Section 2 -->
+        <h2 class="fw-bold" class="fw-bold">Ressources Pédagogiques</h2>
+        <div id="resources" class="table-responsive"></div>
+    
+        <!-- Section 3 -->
+        <h2 class="fw-bold">Informations de la Formation</h2>
+        <div id="trainingInfo" class="table-responsive"></div>
+
+        <!-- Déconnexion -->
+        <div class="table-responsive">
+            <button id="logoutBtn" class="btn btn-danger fw-bold">Se déconnecter</button>
+        </div> 
+    </div>
+
+    <div id="userStatus" class="position-fixed top-0 end-0 p-1 bg-light border rounded">
+        <img id="userAvatar" src="" alt="Avatar" class="rounded-circle" width="40">
+        <span id="userName" class="ms-2"></span>
+        <span class="badge bg-success">En ligne</span>
+    </div>
+     <!-- Bouton flottant -->
+     <a href="../author.html" class="btn btn-primary position-fixed rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px; bottom: 20px; right: 20px; z-index: 999;">
+        <i class="fas fa-circle-info"></i>
+    </a>
+    <footer class="text-white text-center py-4 mt-4 bg-dark">
+        <div class="container">
+            <p class="mb-1 fw-bold">© 2025 KhaliLearn Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        //Animation au défilement
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate-on-scroll");
+
+            const observer = new IntersectionObserver((entries) =>{
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                        //Stop observer après l'animation
+                    }
+                });
+            }, { threshold: 0.1});
+
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/status.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

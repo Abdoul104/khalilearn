@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaliLearn | Evaluation</title>
+    <link rel="icon" href="../assets/logo_kl.png" type="image/png">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/status.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid sticky-top">
+            <a href="../index.html" class="navbar-brand fw-bold">
+                KhaliLearn
+            </a>
+        </div>    
+    </nav>
+    <ol class="breadcrumb bg-light p-3 ">
+        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>  
+        <li class="breadcrumb-item active">Maîtriser les bases de l'informatique</li> 
+        <li class="breadcrumb-item"><a href="dashboard.html">Tableau de bord</a></li>  
+        <li class="breadcrumb-item"><a href="course1.html">Cours</a></li>  
+        <li class="breadcrumb-item active">Evaluations</li>   
+    </ol>
+    <main class="container">
+       
+        <h1 class="m-4 fw-bold">VOS EVALUATIONS</h1>
+        <div class="row">
+            <div class="col-md-6 animate-on-scroll fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Evaluation n°1</h5>
+                        <p>Dans cet évaluation vous êtes invité à tester vos connaissances sur la compréhension de l'informatique,
+                            le fonctionnement d'un ordinateur, sa manipulation et les systèmes d'exploitations.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Cet évaluation n\'est plus disponible.');">Voir plus</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-6 animate-on-scroll fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Evaluation n°2</h5>
+                        <p>Dans cet évaluation vous êtes invité à tester vos connaissances sur les notions relatives 
+                            aux logiciels de traitement de texte, de tableur, de présentation et d'utilisation d'internet.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Cet évaluation n\'est plus disponible.');">Voir plus</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-6 animate-on-scroll fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Evaluation n°3</h5>
+                        <p>Dans cet évaluation vous êtes invité à tester vos connaissances sur les notions de
+                            messagerie éléctronique et de collaboration en ligne.</p>
+                        <a href="#" class="btn btn-primary" onclick="alert('Cet évaluation n\'est plus disponible.');">Voir plus</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-6 animate-on-scroll fade-in">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Evaluation n°4 (Examen final)</h5>
+                        <p>Dans cet examen final vous serai invité à réaliser un projet de 
+                            fin de formation qui aborde l'ensemble des notions abordés. 
+                        </p>
+                        <a href="../course1/eval4_course1.html" class="btn btn-primary">Voir plus</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+    </main>
+
+    <div id="userStatus" class="position-fixed top-0 end-0 p-1 bg-light border rounded">
+        <img id="userAvatar" src="" alt="Avatar" class="rounded-circle" width="40">
+        <span id="userName" class="ms-2"></span>
+        <span class="badge bg-success">En ligne</span>
+    </div>
+     <!-- Bouton flottant -->
+     <a href="../author.html" class="btn btn-primary position-fixed rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px; bottom: 20px; right: 20px; z-index: 999;">
+        <i class="fas fa-circle-info"></i>
+    </a>
+
+    <footer class="text-white text-center py-4 mt-4 bg-dark">
+        <div class="container">
+            <p class="mb-1 fw-bold">© 2025 KhaliLearn. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        //Animation au défilement
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate-on-scroll");
+
+            const observer = new IntersectionObserver((entries) =>{
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                        //Stop observer après l'animation
+                    }
+                });
+            }, { threshold: 0.1});
+
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+    <script src="js/status.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

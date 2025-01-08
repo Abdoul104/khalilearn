@@ -1,0 +1,82 @@
+/* css file of [skill.html] */
+*{
+  font-family: 'PT', sans-serif;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+#about{
+  text-align: justify ;
+}
+main{
+  flex: 1;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.animate-on-scroll{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+.animate-on-scroll.visible{
+    opacity: 1; 
+    transform: translateY(0);
+}
+@font-face{
+    font-family: 'PT';
+    src: url('../PTSerif-Regular.ttf')
+    format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%;
+}
+footer a{
+  color: rgb(231, 231, 241);;
+  text-decoration: underline;
+}
+footer a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.container {
+  flex: 1 0 auto; /* Permet à .container de prendre toute la hauteur disponible */
+  text-align: center;
+}
+
+.signature-container {
+  position: absolute;
+  bottom: 20px; /* Ajuste la distance par rapport au bas de la page */
+  right: 20px;  /* Ajuste la distance par rapport à la droite de la page */
+  text-align: center;
+}
+
+.signature {
+    width: 150px; /* Ajuste la taille de la signature */
+    height: auto;
+    display: block;
+}
+
+.signature-name {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* by Abdoul Rachid BISSARE / +229 01 63 61 49 80 */

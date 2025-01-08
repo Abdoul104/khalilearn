@@ -1,0 +1,194 @@
+{
+    "students": [
+    {
+        "num_ins": "kp-cert-000",
+        "identifiant": "4480@kl16",
+        "nom": "BISSARE",
+        "prenom": "Abdoul Rachid",
+        "email": "rhdkhalil104@gmail.com",
+        "date_ins":"28/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 18,
+        "ps_total": 16,
+        "frais_fi": 12000,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [18, 18, 18, 18],
+            "moyenne": 18,
+            "presence": "16/16",
+            "frais": "payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-111",
+        "identifiant": "4680@kl24",
+        "nom": "KHALIL",
+        "prenom": "Rhd",
+        "email": "rachidbissare@gmail.com",
+        "date_ins":"28/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 10,
+        "ps_total": 8,
+        "frais_fi": 5000,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [10, 10, 10, 10],
+            "moyenne": 10,
+            "presence": "8/16",
+            "frais": "payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-001",
+        "identifiant": "4808@kl42",
+        "nom": "ADAM",
+        "prenom": "Rachidi",
+        "email": "rachidiadam82@gmail.com",
+        "date_ins":"29/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 0,
+        "ps_total": 6,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [0, 0, 0, 0],
+            "moyenne": 0,
+            "presence": "6/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-002",
+        "identifiant": "8808@kl24",
+        "nom": "GOBI",
+        "prenom": "Ibrahim",
+        "email": "gobiibrahim229@gmail.com",
+        "date_ins":"29/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 8.12,
+        "ps_total": 12,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [16.5, 16, 0, 0],
+            "moyenne": 8.12,
+            "presence": "12/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-003",
+        "identifiant": "8880@kl42",
+        "nom": "KARIM",
+        "prenom": "Hadilou",
+        "email": "hadiloukarim6@gmail.com",
+        "date_ins":"30/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 0,
+        "ps_total": 0,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [0, 0, 0, 0],
+            "moyenne": 0,
+            "presence": "0/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-004",
+        "identifiant": "4802@kl22",
+        "nom": "AHOLOU",
+        "prenom": "Fahad",
+        "email": "aholoufahadafiacre@gmail.com",
+        "date_ins":"30/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 1.75,
+        "ps_total": 7,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [7, 0, 0, 0],
+            "moyenne": 1.75,
+            "presence": "7/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-005",
+        "identifiant": "8408@kl44",
+        "nom": "MOUSSA",
+        "prenom": "Bachal",
+        "email": "carinelopeze59@gmail.com",
+        "date_ins":"30/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 7.56,
+        "ps_total": 11,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [12.75, 17.5, 0, 0],
+            "moyenne": 7.56,
+            "presence": "11/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-006",
+        "identifiant": "4404@kl44",
+        "nom": "ASSANE",
+        "prenom": "Abdoul Waris Touré",
+        "email": "waristoureassane@gmail.com",
+        "date_ins":"30/11/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 3.5,
+        "ps_total": 6,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [14, 0, 0, 0],
+            "moyenne": 3.5,
+            "presence": "6/16",
+            "frais": "non payé"
+        }
+    },
+    {
+        "num_ins": "kp-cert-007",
+        "identifiant": "8808@kl88",
+        "nom": "HOUNGNONVI",
+        "prenom": "Jacques",
+        "email": "jacquesslater1@gmail.com",
+        "date_ins":"01/12/2024",
+        "statut_ins": "inscrit",
+        "moy_apprenant": 0,
+        "ps_total": 6,
+        "frais_fi": 0,
+        "formation": {
+            "intitule": "Maîtriser les bases de l'informatique",
+            "duree": "30 jours",
+            "statut": "en cours",
+            "notes": [0, 0, 0, 0],
+            "moyenne": 0,
+            "presence": "6/16",
+            "frais": "non payé"
+        }
+    }
+
+]
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KhaliLearn | Examen Final</title>
+    <link rel="icon" href="../assets/logo_kl.png" type="image/png"> 
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/status.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="text-white text-center py-3 animate-on-scroll fade-in">
+        <h1 class="h3">Maîtriser les bases de l'informatique.</h1>
+    </header>
+    <ol class="breadcrumb bg-light p-3 ">
+        <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>  
+        <li class="breadcrumb-item active">Maîtriser les bases de l'informatique</li> 
+        <li class="breadcrumb-item"><a href="dashboard.html">Tableau de bord</a></li>  
+        <li class="breadcrumb-item"><a href="course1.html">Cours</a></li>  
+        <li class="breadcrumb-item"><a href="eval_course1.html">Evaluations</a></li>
+        <li class="breadcrumb-item active">Examen Final</li>   
+    </ol>
+    <div class="d-flex justify-content-around">
+        <img src="../assets/ordinateur-de-bureau.jpg" alt="ordinateur" title="Ordinateur de bureau" class="ajust mt-4">
+    </div>
+    <div class="container mt-5 animate-on-scroll">
+        <h1 class="text-center text-primary">Examen Final</h1><br>
+        <p class="text-center">Formation : <strong>Maîtriser les bases de l'informatique</strong></p>
+        <p class="text-center text-danger">Date limite de soumission : 12 janvier 2025, 17h00</p>
+        <form action="https://formspree.io/f/xlddbvlz" method="POST">
+            <input type="hidden" name="_subject" value="Examen Final - Résultats">
+            
+            <!-- Nom et Email -->
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom et Prénom</label>
+                <input type="text" class="form-control" id="name" name="Nom" required>
+                <div class="invalid-feedback">Le champ 'Nom et Prénom' ne doit contenir que des lettres.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Adresse Email</label>
+                <input type="email" class="form-control" id="email" name="Email" required>
+                <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+            </div>
+
+            <!-- Section : Réponses ouvertes -->
+            <h3 class="text-secondary mt-4 h4">Partie 1 : Réponses ouvertes (8 questions)</h3>
+            <div class="mb-3">
+                <label>1. Définissez ce qu'est un système d'exploitation et donnez deux exemples.</label>
+                <textarea class="form-control" name="Question_1" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>2. Expliquez la différence entre matériel et logiciel.</label>
+                <textarea class="form-control" name="Question_2" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>3. Pourquoi est-il important d'utiliser des mots de passe sécurisés ?</label>
+                <textarea class="form-control" name="Question_3" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>4. Citez trois outils de collaboration en ligne et leurs utilisations principales.</label>
+                <textarea class="form-control" name="Question_4" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>5. Comment identifier un email de phishing ?</label>
+                <textarea class="form-control" name="Question_5" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>6. Donnez deux raccourcis clavier courants et leurs fonctions.</label>
+                <textarea class="form-control" name="Question_6" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>7. Expliquez le rôle d'un tableur comme Excel ou Google Sheets.</label>
+                <textarea class="form-control" name="Question_7" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label>8. Pourquoi est-il essentiel de mettre à jour un logiciel ?</label>
+                <textarea class="form-control" name="Question_8" rows="3" required></textarea>
+            </div>
+
+            <!-- Section : QCM -->
+            <h3 class="text-secondary mt-4 h4">Partie 2 : QCM (8 questions)</h3>
+            <div class="mb-3">
+                <label>1. Quelle est la fonction principale de la RAM ?</label>
+                <select class="form-select" name="QCM_1" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Stocker des données à long terme</option>
+                    <option value="b">Exécuter des instructions</option>
+                    <option value="c">Stocker temporairement des données</option>
+                    <option value="d">Protéger le système contre les virus</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>2. Quel logiciel est un traitement de texte ?</label>
+                <select class="form-select" name="QCM_2" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Excel</option>
+                    <option value="b">Word</option>
+                    <option value="c">Photoshop</option>
+                    <option value="d">Linux</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>3. Quel est le rôle d'un navigateur web ?</label>
+                <select class="form-select" name="QCM_3" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Créer des présentations</option>
+                    <option value="b">Accéder à des pages web</option>
+                    <option value="c">Envoyer des emails</option>
+                    <option value="d">Protéger contre les virus</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>4. Lequel des éléments suivants est un logiciel de collaboration en ligne ?</label>
+                <select class="form-select" name="QCM_4" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Google Drive</option>
+                    <option value="b">RAM</option>
+                    <option value="c">SSD</option>
+                    <option value="d">Microsoft Paint</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>5. Quelle extension correspond à un fichier image ?</label>
+                <select class="form-select" name="QCM_5" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">.jpg</option>
+                    <option value="b">.mp3</option>
+                    <option value="c">.docx</option>
+                    <option value="d">.zip</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>6. Qu'est-ce que le phishing ?</label>
+                <select class="form-select" name="QCM_6" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Un type de fichier malveillant</option>
+                    <option value="b">Une tentative de vol d'informations</option>
+                    <option value="c">Un antivirus</option>
+                    <option value="d">Un logiciel de traitement de texte</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>7. Que signifie "format de fichier" ?</label>
+                <select class="form-select" name="QCM_7" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">La taille d'un fichier</option>
+                    <option value="b">Le type et l'organisation des données dans un fichier</option>
+                    <option value="c">Le nom du fichier</option>
+                    <option value="d">L'emplacement du fichier</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>8. Quel est l'objectif principal d'une mise à jour logicielle ?</label>
+                <select class="form-select" name="QCM_8" required>
+                    <option value="">Sélectionnez une réponse</option>
+                    <option value="a">Réduire la taille des fichiers</option>
+                    <option value="b">Améliorer la sécurité et les performances</option>
+                    <option value="c">Créer un nouveau fichier</option>
+                    <option value="d">Changer le nom du logiciel</option>
+                </select>
+            </div>
+
+            <!-- Section : Questions basées sur des images -->
+            <h3 class="text-secondary mt-4 h4">Partie 3 : Questions avec images (4 questions)</h3>
+            <div class="mb-3">
+                <label>1. Identifiez cet outil de traitement de texte :</label><br>
+                <img src="../assets/word.png" alt="Microsoft Word" class="img-fluid mb-2 h-25 w-25">
+                <input type="text" class="form-control" name="Image_Question_1" required>
+            </div>
+            <div class="mb-3">
+                <label>2. Quel est le rôle de cet outil collaboratif ?</label><br>
+                <img src="../assets/google-drive.png" alt="Google Drive" class="img-fluid mb-2 h-25 w-25">
+                <input type="text" class="form-control" name="Image_Question_2" required>
+            </div>
+            <div class="mb-3">
+                <label>3. Quel type de fichier utilise cette extension ?</label><br>
+                <img src="../assets/jpeg file.png" alt="JPEG File Icon" class="img-fluid mb-2 h-25 w-25">
+                <input type="text" class="form-control" name="Image_Question_3" required>
+            </div>
+            <div class="mb-3">
+                <label>4. Quel est le nom de cet outil de sécurité informatique ?</label><br>
+                <img src="../assets/security_tool_image.jpeg" alt="Security Tool" class="img-fluid mb-2 h-25 w-25">
+                <input type="text" class="form-control" name="Image_Question_4" required>
+            </div>
+
+            <!-- Bouton de soumission -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Envoyer mes réponses</button>
+            </div>
+        </form>
+    </div>
+    <div id="userStatus" class="position-fixed top-0 end-0 p-1 bg-light border rounded">
+        <img id="userAvatar" src="" alt="Avatar" class="rounded-circle" width="40">
+        <span id="userName" class="ms-2"></span>
+        <span class="badge bg-success">En ligne</span>
+    </div>
+     <!-- Bouton flottant -->
+     <a href="../author.html" class="btn btn-primary position-fixed rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px; bottom: 20px; right: 20px; z-index: 999;">
+        <i class="fas fa-circle-info"></i>
+    </a>
+    <footer class="text-white text-center py-4 mt-4 bg-dark">
+        <div class="container">
+            <p class="mb-1 fw-bold">© 2025 KhaliLearn Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        //Animation au défilement
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".animate-on-scroll");
+
+            const observer = new IntersectionObserver((entries) =>{
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("visible");
+
+                        observer.unobserve(entry.target);
+                        //Stop observer après l'animation
+                    }
+                });
+            }, { threshold: 0.1});
+
+            elements.forEach(element => observer.observe(element));
+        });
+// by Abdoul Rachid BISSARE / +229 01 63 61 49 80
+        document.querySelector('form').addEventListener('submit', function (event) {
+            let isValid = true; // Pour suivre l'état global de la validation
+
+            // Validation du champ "Nom et Prénom"
+            const nameField = document.getElementById('name');
+            const nameError = nameField.nextElementSibling; // Le span pour afficher l'erreur
+            const nameRegex = /^[a-zA-ZÀ-ÖØ-öø-ÿ\s'-]+$/; // Autorise lettres, espaces, accents, apostrophes et tirets
+            if (!nameRegex.test(nameField.value.trim())) {
+                nameField.classList.add('is-invalid');
+                nameError.textContent = "Le champ 'Nom et Prénom' ne doit contenir que des lettres.";
+                isValid = false;
+            } else {
+                nameField.classList.remove('is-invalid');
+                nameField.classList.add('is-valid');
+                nameError.textContent = "";
+            }
+
+            // Validation du champ "Email"
+            const emailField = document.getElementById('email');
+            const emailError = emailField.nextElementSibling;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Vérifie un email valide
+            if (!emailRegex.test(emailField.value.trim())) {
+                emailField.classList.add('is-invalid');
+                emailError.textContent = "Veuillez entrer une adresse email valide.";
+                isValid = false;
+            } else {
+                emailField.classList.remove('is-invalid');
+                emailField.classList.add('is-valid');
+                emailError.textContent = "";
+            }
+
+            // Empêcher l'envoi si des erreurs sont détectées
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="js/status.js"></script>
+
+</body>
+</html>
