@@ -34,7 +34,7 @@
 2. Connexion Internet (pour les dépendances Bootstrap).  
 
 ## **Déploiement**  
-Ce site est déployé avec Vercel grâce au dépôt privé sur Github. Visitez le site ici : [Lien vers le site]().
+Ce site est déployé avec Vercel grâce au dépôt privé sur Github. Visitez le site ici : [Lien vers le site](https://khalilearn.vercel.app).
 
 ## **Créé par**  
 - **Nom** : Abdoul Rachid BISSARE  
