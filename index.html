@@ -323,18 +323,59 @@
 
             elements.forEach(element => observer.observe(element));
         });
-        // Validation du formulaire d'inscription
+        //Vérification des données du formulaire d'inscription
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("registrationForm");
+            const formationSelect = document.getElementById("formation");
+            const feedbackElement = document.createElement("div"); // Élément pour afficher les messages d'erreur
+            feedbackElement.classList.add("invalid-feedback");
+            feedbackElement.textContent = "Vous êtes déjà inscrit à cette formation.";
+            formationSelect.parentElement.appendChild(feedbackElement); // Ajoute le message sous le champ
+
+            // Récupération des inscriptions existantes
+            let inscriptions = JSON.parse(localStorage.getItem("inscriptions")) || [];
 
             form.addEventListener("submit", function (event) {
+                // Validation des champs
                 if (!form.checkValidity()) {
                     event.preventDefault();
                     event.stopPropagation();
+                    form.classList.add("was-validated");
+                    return;
                 }
-                form.classList.add("was-validated");
+
+                const email = document.getElementById("email").value.trim();
+                const formation = formationSelect.value;
+
+                // Vérifie si l'utilisateur est déjà inscrit à cette formation
+                const dejaInscrit = inscriptions.find(
+                    (inscription) =>
+                        inscription.email === email && inscription.formation === formation
+                );
+
+                if (dejaInscrit) {
+                    event.preventDefault(); // Empêche l'envoi si déjà inscrit
+                    formationSelect.classList.add("is-invalid");
+                    return;
+                }
+
+                // Si pas déjà inscrit, ajoute l'inscription
+                inscriptions.push({
+                    email: email,
+                    formation: formation,
+                });
+                // Met à jour le Local Storage
+                localStorage.setItem("inscriptions", JSON.stringify(inscriptions));
+
+                // Supprime les erreurs et permet l'envoi via Formspree
+                formationSelect.classList.remove("is-invalid");
+                form.classList.remove("was-validated");
+
+                // Laisser le formulaire s'envoyer
+                form.submit();
             });
         });
+
         // Vérification des données du formulaire de contact
         document.getElementById("#contact-form form").addEventListener("submit", function (event){
             const nom = document.getElementById("name").value.trim();
@@ -348,20 +389,18 @@
                 event.preventDefault();
                 return;
             }
-            
             if (!emailPattern.test(email)){
                 alert("Veuillez entrer une adresse e-mail valide !");
                 event.preventDefault();
                 return;
             }
-
             if(message.length < 10){
                 alert("Le message doit contenir au moins 10 caractères !");
                 event.preventDefault();
                 return;
             }
         });
-        //
+        // Ajustement de la position du header.
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
