@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <tr><td class="fw-bold">Prénom</td><td>${student.prenom}</td></tr>
             <tr><td class="fw-bold">Email</td><td>${student.email}</td></tr>
             <tr><td class="fw-bold">Date d'inscription</td><td>${student.date_ins}</td></tr>
-            <tr><td class="fw-bold">Statut</td><td>${student.statut_ins}</td></tr>
+            <tr><td class="fw-bold">Statut</td><td class="text-success">${student.statut_ins}</td></tr>
         </table>
     `;
 
