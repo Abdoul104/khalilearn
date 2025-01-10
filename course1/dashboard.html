@@ -72,10 +72,8 @@
     </ol>
     <div class="container mt-2 animate-on-scroll">
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Important :</strong> Veuillez compléter l'examen final disponible <a href="eval4_course1.html">ici</a> avant la date limite et soumettre vos réponses. 
-            Assurez-vous également de remplir toutes les conditions d'éligibilité au certificat, 
-            notamment le règlement des frais de formation fixés à <strong>6000 FCFA</strong>. Les Informations
-            du tableau de bord sont ajustées en temps réels.
+            <strong>Important :</strong> Veuillez compléter l'examen final disponible <a href="eval4_course1.html">ici</a> avant la date limite <span class="fw-bold">[12 Janvier 2025]</span> et soumettre vos réponses. 
+            Les Informations du tableau de bord sont ajustées tout au long de la formation.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         
@@ -95,13 +93,40 @@
         <!-- Section 3 -->
         <h2 class="fw-bold">Informations de la Formation</h2>
         <div id="trainingInfo" class="table-responsive"></div>
-
         <!-- Déconnexion -->
         <div class="table-responsive">
             <button id="logoutBtn" class="btn btn-danger fw-bold">Se déconnecter</button>
-        </div> 
+        </div>
+        <hr> 
+        <div>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#eligibilityModal" class="text-primary fw-bold">Voir les conditions d'éligibilité au certificat</a>
+        </div>
+        <hr>
     </div>
-
+    <!-- Boîte modale -->
+    <div class="modal fade" id="eligibilityModal" tabindex="-1" aria-labelledby="eligibilityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="eligibilityModalLabel">Conditions d'éligibilité au certificat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">1. <strong>Statut d'inscription :</strong> Vous devez être officiellement inscrit à la formation.</li>
+                        <li class="list-group-item">2. <strong>Moyenne obtenue :</strong> Vous devez avoir une moyenne supérieure ou égale à <strong>12/20</strong>.</li>
+                        <li class="list-group-item">3. <strong>Présence aux séances :</strong> Vous devez avoir assisté à au moins <strong>50 % des séances</strong> (exemple : <strong>8/16</strong>).</li>
+                        <li class="list-group-item">4. <strong>Frais d'inscription :</strong> Les frais de formation doivent être intégralement réglés (<strong>6000 FCFA</strong>).</li>
+                        <li class="list-group-item"><strong>NB:</strong> Le calcul de votre moyenne se fait sur la base des 4 notes obtenues. 
+                        <br><strong>Moyenne obtenue = (n1 + n2 + n3 + n4) ÷ 4</li></strong>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="userStatus" class="position-fixed top-0 end-0 p-1 bg-light border rounded">
         <img id="userAvatar" src="" alt="Avatar" class="rounded-circle" width="40">
         <span id="userName" class="ms-2"></span>
@@ -116,6 +141,7 @@
             <p class="mb-1 fw-bold">© 2025 KhaliLearn Tous droits réservés.</p>
         </div>
     </footer>
+    <!-- Script -->
     <script>
         //Animation au défilement
         document.addEventListener("DOMContentLoaded", () => {
