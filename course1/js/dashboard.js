@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <table class="table table-striped">
                 <tr><td class="fw-bold">Intitulé de la formation</td><td>${student.formation.intitule}</td></tr>
                 <tr><td class="fw-bold">Durée</td><td>${student.formation.duree}</td></tr>
-                <tr><td class="fw-bold">Statut</td><td>${student.formation.statut}</td></tr>
-                <tr><td class="fw-bold">Notes obtenues</td><td>${student.formation.notes.join(', ')}</td></tr>
+                <tr><td class="fw-bold">Statut</td><td class="text-success">${student.formation.statut}</td></tr>
+                <tr><td class="fw-bold">Notes obtenues</td><td>${student.formation.notes.join('<strong> | </strong> ')}</td></tr>
                 <tr><td class="fw-bold">Moyenne obtenue</td><td>${student.formation.moyenne}/20</td></tr>
                 <tr><td class="fw-bold">Présence</td><td>${student.formation.presence}</td></tr>
                 <tr><td class="fw-bold">Frais d'inscription</td><td>${student.formation.frais}</td></tr>
