@@ -2,7 +2,7 @@
     "students": [
     {
         "num_ins": "kp-cert-000",
-        "identifiant": "4480@kl16",
+        "password": "4480@kl16",
         "nom": "BISSARE",
         "prenom": "Abdoul Rachid",
         "email": "rhdkhalil104@gmail.com",
@@ -23,28 +23,28 @@
     },
     {
         "num_ins": "kp-cert-111",
-        "identifiant": "4680@kl24",
+        "password": "4680@kl24",
         "nom": "KHALIL",
         "prenom": "Rhd",
         "email": "rachidbissare@gmail.com",
         "date_ins":"28/11/2024",
         "statut_ins": "inscrit",
-        "moy_apprenant": 10,
+        "moy_apprenant": 14,
         "ps_total": 8,
-        "frais_fi": 5000,
+        "frais_fi": 0,
         "formation": {
             "intitule": "Maîtriser les bases de l'informatique",
             "duree": "30 jours",
             "statut": "en cours",
-            "notes": [10, 10, 10, 10],
-            "moyenne": 10,
+            "notes": [14, 14, 14, 14],
+            "moyenne": 14,
             "presence": "8/16",
-            "frais": "payé"
+            "frais": " non payé"
         }
     },
     {
         "num_ins": "kp-cert-001",
-        "identifiant": "4808@kl42",
+        "password": "4808@kl42",
         "nom": "ADAM",
         "prenom": "Rachidi",
         "email": "rachidiadam82@gmail.com",
@@ -65,7 +65,7 @@
     },
     {
         "num_ins": "kp-cert-002",
-        "identifiant": "8808@kl24",
+        "password": "8808@kl24",
         "nom": "GOBI",
         "prenom": "Ibrahim",
         "email": "gobiibrahim229@gmail.com",
@@ -86,7 +86,7 @@
     },
     {
         "num_ins": "kp-cert-003",
-        "identifiant": "8880@kl42",
+        "password": "8880@kl42",
         "nom": "KARIM",
         "prenom": "Hadilou",
         "email": "hadiloukarim6@gmail.com",
@@ -107,7 +107,7 @@
     },
     {
         "num_ins": "kp-cert-004",
-        "identifiant": "4802@kl22",
+        "password": "4802@kl22",
         "nom": "AHOLOU",
         "prenom": "Fahad",
         "email": "aholoufahadafiacre@gmail.com",
@@ -128,7 +128,7 @@
     },
     {
         "num_ins": "kp-cert-005",
-        "identifiant": "8408@kl44",
+        "password": "8408@kl44",
         "nom": "MOUSSA",
         "prenom": "Bachal",
         "email": "carinelopeze59@gmail.com",
@@ -149,7 +149,7 @@
     },
     {
         "num_ins": "kp-cert-006",
-        "identifiant": "4404@kl44",
+        "password": "4404@kl44",
         "nom": "ASSANE",
         "prenom": "Abdoul Waris Touré",
         "email": "waristoureassane@gmail.com",
@@ -170,7 +170,7 @@
     },
     {
         "num_ins": "kp-cert-007",
-        "identifiant": "8808@kl88",
+        "password": "8808@kl88",
         "nom": "HOUNGNONVI",
         "prenom": "Jacques",
         "email": "jacquesslater1@gmail.com",
@@ -189,6 +189,6 @@
             "frais": "non payé"
         }
     }
-
+    
 ]
 }

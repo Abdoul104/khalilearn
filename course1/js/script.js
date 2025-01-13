@@ -1,12 +1,13 @@
 sessionStorage.clear();
 
-let students = [];
+var students = [];
 
 // Chargement des données depuis data.json
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
-        students = data.students; // Assurez-vous que les données correspondent au format
+        students = data.students; 
+        // Assurez-vous que les données correspondent au format
         console.log(students);
     })
     .catch(error => console.error('Erreur de chargement des données:', error));
@@ -17,11 +18,11 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
     console.log(students);
 
-    const identifiant = document.getElementById("identifiant").value.trim();
+    const password = document.getElementById("password").value.trim();
     const numInscription = document.getElementById("numInscription").value.trim();
 
     const student = students.find(
-        s => s.num_ins === numInscription && s.identifiant === identifiant
+        s => s.num_ins === numInscription && s.password === password
     );
 
     if (student) {
@@ -35,7 +36,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
         // Affichage du message d'erreur
         const errorMessage = document.getElementById("loginError");
         errorMessage.style.display = "block";
-        errorMessage.innerText = "Identifiant ou numéro d'inscription incorrect.";
+        errorMessage.innerText = "Mot de passe ou numéro d'inscription incorrect.";
     }
 });
 
