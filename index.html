@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style1.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-    <!-- Navbar -->
+    <!-- Header -->
     <header class="sticky-top navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand fw-bold">KhaliLearn</a>
@@ -23,7 +23,7 @@
                 <nav class="container col-md-12 fw-bold">
                     <ul class="navbar-nav justify-content-end w-100">
                         <li class="nav-item"><a class="nav-link active" href="#carouselExample">Formation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#form_ins">S'inscrire</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#form_ins">S'inscrire</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact-form">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#astuces">Astuces</a></li>
@@ -71,7 +71,6 @@
                     </div>
                 </div>
             </div>
-        
             <!-- Navigation des images -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -83,7 +82,7 @@
             </button>
         </div>
 
-        <!-- Sections supplémentaires -->
+        <!-- Sections Formations -->
         <h1 class="m-4 fw-bold" id="formations">NOS FORMATIONS</h1>
         <div class="row">
             <div class="col-md-4 animate-on-scroll">
@@ -152,6 +151,7 @@
                 </div>
             </div>
         </div><br>
+        <!-- Section s'inscrire à une formation -->
         <section id="form_ins" class="py-5 bg-light animate-on-scroll">
             <div class="container">
                 <h2 class="text-center fw-bold mb-4">Inscrivez-vous à une formation</h2>
@@ -161,7 +161,6 @@
                         <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom" pattern="[A-Za-zÀ-ÿ\s\-]+" required>
                         <div class="invalid-feedback">Veuillez renseigner un nom valide (lettres uniquement).</div>
                     </div>
-
                     <div class="mb-3">
                         <label for="prenom" class="form-label">Prénom</label>
                         <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre prénom" pattern="[A-Za-zÀ-ÿ\s\-]+" required>
@@ -192,6 +191,7 @@
             </div>
         </section>
         <br>
+        <!-- Section à propos -->
         <section id="about" class="py-5 bg-light animate-on-scroll fade-in">
             <div class="container">
                 <h2 class="text-center fw-bold mb-4">À propos de KhaliLearn</h2>
@@ -213,7 +213,7 @@
                 </em>
             </div>
         </section><br>
-        <!-- Formulaire de contact -->
+        <!-- Section de Formulaire de contact -->
         <div id="contact-form" class="py-5 bg-light animate-on-scroll fade-in">
             <h2 class="text-dark fw-bold">Contactez-Nous</h2>
             <form action="https://formspree.io/f/xlddozyr" method="POST">
@@ -239,7 +239,6 @@
         <!-- Astuces informatique -->
         <div id="astuces" class="container mt-5 py-5 bg-light animate-on-scroll">
             <h2 class="text-center text-dark fw-bold mb-4">Astuces informatiques</h2>
-            
             <!-- Carousel pour les astuces -->
             <div id="carouselAstuces" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -254,7 +253,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Item 2 -->
                     <div class="carousel-item">
                         <div class="card mx-auto" style="width: 18rem; border: 2px solid rgb(46, 46, 216); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
@@ -266,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 2 -->
+                    <!-- Item 3 -->
                     <div class="carousel-item">
                         <div class="card mx-auto" style="width: 18rem; border: 2px solid rgb(46, 46, 216); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                             <div class="card-body text-center">
@@ -278,8 +276,7 @@
                         </div>
                     </div>
 
-
-                    <!-- Item 3 -->
+                    <!-- Item 4 -->
                     <div class="carousel-item">
                         <div class="card mx-auto" style="width: 18rem; border: 2px solid rgb(46, 46, 216); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
                             <div class="card-body text-center">
@@ -323,14 +320,17 @@
 
             elements.forEach(element => observer.observe(element));
         });
+
         //Vérification des données du formulaire d'inscription
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("registrationForm");
             const formationSelect = document.getElementById("formation");
-            const feedbackElement = document.createElement("div"); // Élément pour afficher les messages d'erreur
+            const feedbackElement = document.createElement("div"); 
+            // Élément pour afficher les messages d'erreur
             feedbackElement.classList.add("invalid-feedback");
             feedbackElement.textContent = "Vous êtes déjà inscrit à cette formation.";
-            formationSelect.parentElement.appendChild(feedbackElement); // Ajoute le message sous le champ
+            formationSelect.parentElement.appendChild(feedbackElement); 
+            // Ajoute le message sous le champ
 
             // Récupération des inscriptions existantes
             let inscriptions = JSON.parse(localStorage.getItem("inscriptions")) || [];
@@ -343,7 +343,6 @@
                     form.classList.add("was-validated");
                     return;
                 }
-
                 const email = document.getElementById("email").value.trim();
                 const formation = formationSelect.value;
 
@@ -400,6 +399,7 @@
                 return;
             }
         });
+        
         // Ajustement de la position du header.
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function (e) {
